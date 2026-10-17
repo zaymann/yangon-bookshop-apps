@@ -6,8 +6,8 @@
   <title>Yangon Photo Editor</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="../icon-192.png"><link rel="apple-touch-icon" href="../icon-192.png"><meta name="theme-color" content="#e0800b">
   
 <script type="module">
-import init, * as bindings from './photocraft-web-f5788fd383e50ea0.js';
-const wasm = await init({ module_or_path: './photocraft-web-f5788fd383e50ea0_bg.wasm' });
+import init, * as bindings from './photocraft-web-c45640df33e32300.js';
+const wasm = await init({ module_or_path: './photocraft-web-c45640df33e32300_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -28,7 +28,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     #photocraft_stalled { color: #8c8c8c; visibility: hidden; animation: photocraft-stalled 0s 20s forwards; }
     @keyframes photocraft-stalled { to { visibility: visible; } }
   </style>
-<link rel="modulepreload" href="./photocraft-web-f5788fd383e50ea0.js" crossorigin="anonymous" integrity="sha384-V+4wr2YF88lxRS0wbNECZuJ9Xpc8YLYosQXjtCaCvKvf69ucD2+kKBviHirZLcY5"><link rel="preload" href="./photocraft-web-f5788fd383e50ea0_bg.wasm" crossorigin="anonymous" integrity="sha384-bpXRVr+Q4GPy5ei+kCJG5AEtksjTBCmPKcHQ8uObVb9ni2RtHe2aIkMmjOJrC2B0" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="./photocraft-web-c45640df33e32300.js" crossorigin="anonymous" integrity="sha384-/ILVL4DBiEnxzqvZUuy8Vb7NXfzAmav2Dr+0eLfVl2A4yPrX2NHrc6HZJE3/dyst"><link rel="preload" href="./photocraft-web-c45640df33e32300_bg.wasm" crossorigin="anonymous" integrity="sha384-Vz+yorCFIrf1deMrFysv/olCUb6gajdVlUHv3xgHWDNkyJQEET5RIGFzTxopfPHo" as="fetch" type="application/wasm"></head>
 <body>
   <canvas id="photocraft_canvas"></canvas>
   <div id="photocraft_loading">
