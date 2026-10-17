@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yangon Bookshop Pdfer</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="../icon-192.png"><link rel="apple-touch-icon" href="../icon-192.png"><meta name="theme-color" content="#e0800b">
+    
+<script type="module">
+import init, * as bindings from './pdfcraft-web-30802ade8facff96.js';
+const wasm = await init({ module_or_path: './pdfcraft-web-30802ade8facff96_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #f1f1f3; }
+      canvas { width: 100%; height: 100%; display: block; outline: none; }
+      @media (prefers-color-scheme: dark) { html, body { background: #19191c; } }
+    </style>
+  <link rel="modulepreload" href="./pdfcraft-web-30802ade8facff96.js" crossorigin="anonymous" integrity="sha384-AiGQXeruIhivBb+6t1n/cxGqqBvHqYAs2pR0OQidUTSTLpr+uDeqakdCbu+iRdrq"><link rel="preload" href="./pdfcraft-web-30802ade8facff96_bg.wasm" crossorigin="anonymous" integrity="sha384-2yC94rEciTqTEdmR/awYgIVenICxUvCLB5I5rjKK0FyfF57dRGZeTCA6mUwFQTi2" as="fetch" type="application/wasm"></head>
+  <body>
+    <canvas id="pdfcraft"></canvas>
+  </body>
+</html>

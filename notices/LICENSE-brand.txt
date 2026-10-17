@@ -1,0 +1,7 @@
+Yangon Book Shop brand
+
+The Yangon Book Shop name and logo in this folder (yangon-bookshop-logo.png, app-icon-1024.png,
+app-icon.ico) are the property of Yangon Book Shop. They are not open source and are not
+covered by the project licences (MIT OR Apache-2.0). They may be used only unmodified and only as
+part of Yangon Bookshop Pdfer, to identify it. Anyone redistributing a modified version of this
+software must remove them.

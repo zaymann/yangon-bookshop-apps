@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="my">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yangon Book Shop Apps</title>
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <style>
+    :root { --bg: #f5f3ef; --card: #ffffff; --text: #1f1d1a; --muted: #6b6560; --accent: #e0800b; --border: #e4dfd7; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #1b1a18; --card: #26241f; --text: #f1ede6; --muted: #a9a29a; --border: #3a3630; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: "Noto Sans Myanmar", "Myanmar Text", system-ui, sans-serif; line-height: 1.6; }
+    main { max-width: 760px; margin: 0 auto; padding: 32px 16px 48px; }
+    header { text-align: center; margin-bottom: 28px; }
+    header img { width: 180px; max-width: 60%; height: auto; }
+    h1 { font-size: 1.5rem; margin: 12px 0 4px; }
+    header p { color: var(--muted); margin: 0; }
+    .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    a.app { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-decoration: none; color: inherit; }
+    a.app:hover, a.app:focus-visible { border-color: var(--accent); outline: none; }
+    a.app h2 { margin: 0 0 6px; font-size: 1.2rem; color: var(--accent); }
+    a.app p { margin: 0; color: var(--muted); }
+    .notes { margin-top: 28px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; }
+    .notes h3 { margin: 0 0 8px; font-size: 1rem; }
+    .notes ul { margin: 0; padding-left: 20px; }
+    footer { margin-top: 28px; font-size: 0.85rem; color: var(--muted); text-align: center; }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="logo.png" alt="Yangon Book Shop">
+    <h1>Yangon Book Shop Apps</h1>
+    <p>Browser ထဲမှာ တိုက်ရိုက်သုံးနိုင်သော app များ</p>
+  </header>
+
+  <div class="apps">
+    <a class="app" href="photo-editor/">
+      <h2>Yangon Photo Editor</h2>
+      <p>ပုံပြင်ခြင်း၊ layer များ၊ PSD ဖိုင်များ။ Stylus pen ၏ ဖိအားကို ထောက်ပံ့သည်။</p>
+    </a>
+    <a class="app" href="pdfer/">
+      <h2>Yangon Bookshop Pdfer</h2>
+      <p>PDF ဖတ်ခြင်း၊ ပြင်ခြင်း၊ ပေါင်းခြင်း၊ စာမျက်နှာ စီခြင်း။</p>
+    </a>
+  </div>
+
+  <section class="notes">
+    <h3>သိထားရန်</h3>
+    <ul>
+      <li>ဖွင့်သော ဖိုင်များသည် သင့် device ပေါ်တွင်သာ ရှိပြီး မည်သည့် server သို့မျှ မပို့ပါ။</li>
+      <li>Save သို့မဟုတ် Export လုပ်လျှင် Downloads folder သို့ download အဖြစ် ရောက်ပါမည်။</li>
+      <li>Browser ကို ပိတ်ခြင်း သို့မဟုတ် reload မလုပ်မီ save လုပ်ပါ။</li>
+      <li>Chrome ၏ ⋮ menu › Add to Home screen ဖြင့် app တစ်ခုချင်းကို home screen တွင် ထည့်နိုင်သည်။</li>
+    </ul>
+  </section>
+
+  <footer>
+    Based on <a href="https://github.com/storytold/photocraft">PhotoCraft</a> and
+    <a href="https://github.com/storytold/pdfcraft">PdfCraft</a> (MIT OR Apache-2.0).
+    <a href="LICENSE-MIT">MIT</a> · <a href="LICENSE-APACHE">Apache-2.0</a> ·
+    <a href="notices/">Notices</a>.
+    The Yangon Book Shop name and logo are trademarks of Yangon Book Shop.
+  </footer>
+</main>
+</body>
+</html>
