@@ -1930,9 +1930,6 @@ function __wbg_get_imports() {
             const ret = arg0.requestDevice(arg1);
             return ret;
         },
-        __wbg_requestFullscreen_4eb8242c77c753fd: function() { return handleError(function (arg0) {
-            arg0.requestFullscreen();
-        }, arguments); },
         __wbg_resolve_0076e10020304ede: function(arg0) {
             const ret = Promise.resolve(arg0);
             return ret;
