@@ -1,0 +1,21 @@
+{
+  "name": "YECWord",
+  "short_name": "YECWord",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f1f1f3",
+  "theme_color": "#0d9488",
+  "icons": [
+    {
+      "src": "../yecword-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../yecword-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-"""Refresh photo-editor/ and pdfer/ from the two repos' Trunk builds (dist/web), keeping each
+"""Refresh photo-editor/, pdfer/ and yecword/ from the three repos' Trunk builds (dist/web), keeping each
 folder's manifest.webmanifest and putting back the page title and home-screen links.
 
     python update-site.py
@@ -11,9 +11,12 @@ HERE = pathlib.Path(__file__).resolve().parent
 APPS = {
     "photo-editor": (HERE.parent / "photocraft" / "dist" / "web", "Yangon Photo Editor"),
     "pdfer": (HERE.parent / "editor" / "dist" / "web", "Yangon Bookshop Pdfer"),
+    "yecword": (HERE.parent / "yecword" / "dist" / "web", "YECWord"),
 }
-LINKS = ('<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="../icon-192.png">'
-         '<link rel="apple-touch-icon" href="../icon-192.png"><meta name="theme-color" content="#e0800b">')
+# Each app's home-screen icon (YECWord has its own; the others use the shop's).
+ICONS = {"yecword": "yecword"}
+LINKS = ('<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="../{icon}-192.png">'
+         '<link rel="apple-touch-icon" href="../{icon}-192.png"><meta name="theme-color" content="#e0800b">')
 
 for folder, (build, title) in APPS.items():
     dest = HERE / folder
@@ -23,7 +26,7 @@ for folder, (build, title) in APPS.items():
     (dest / "manifest.webmanifest").write_bytes(manifest)
     page = dest / "index.html"
     html = page.read_text(encoding="utf-8")
-    html, n = re.subn(r"<title>[^<]*</title>", f"<title>{title}</title>{LINKS}", html, count=1)
+    html, n = re.subn(r"<title>[^<]*</title>", f"<title>{title}</title>{LINKS.format(icon=ICONS.get(folder, 'icon'))}", html, count=1)
     if n != 1:
         raise SystemExit(f"{page}: no <title> to replace")
     page.write_text(html, encoding="utf-8", newline="\n")
